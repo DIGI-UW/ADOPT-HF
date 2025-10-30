@@ -1,5 +1,5 @@
 //
-// This source file is part of the ENGAGE-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -16,7 +16,7 @@ struct Icon: View {
             .scaledToFit()
             .frame(width: 128, height: 128)
             .clipShape(RoundedRectangle(cornerRadius: 32))
-            .accessibilityLabel("ENGAGE-HF Icon")
+            .accessibilityLabel("ADOPT-HF Icon")
     }
 }
 

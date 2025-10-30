@@ -1,5 +1,5 @@
 //
-// This source file is part of the ENGAGE-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -75,9 +75,9 @@ struct VideoListSection: View {
     ScrollView {
         LazyVStack(spacing: 12) {
             VideoListSection(
-                title: "ENGAGE-HF Application",
-                subtitle: "Helpful videos on the ENGAGE-HF mobile application.",
-                videos: [Video(title: "Welcome Video", youtubeId: "y2ziZVWossE", orderIndex: 1)]
+                title: "ADOPT-HF Application",
+                subtitle: "Helpful videos on the ADOPT-HF mobile application.",
+                videos: [Video(title: "Welcome Video", youtubeId: "gCkpkxcJVAY", orderIndex: 1)]
             )
         }
     }
@@ -90,8 +90,8 @@ struct VideoListSection: View {
     ScrollView {
         LazyVStack(spacing: 12) {
             VideoListSection(
-                title: "ENGAGE-HF Application",
-                subtitle: "Helpful videos on the ENGAGE-HF mobile application.",
+                title: "ADOPT-HF Application",
+                subtitle: "Helpful videos on the ADOPT-HF mobile application.",
                 videos: [Video(title: "Welcome Video", youtubeId: "1", orderIndex: 1)]
             )
         }

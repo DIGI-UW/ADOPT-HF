@@ -1,5 +1,5 @@
 //
-// This source file is part of the ENGAGE-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -19,7 +19,7 @@ struct StudyConcluded: View {
             VStack(alignment: .center, spacing: 16) {
                 Icon()
                     .padding()
-                Text("Thank you for participating in the\nENGAGE-HF study!")
+                Text("Thank you for participating in the\nADOPT-HF study!")
                 Text("Your account was deactivated\nby your study coordinator.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
@@ -28,7 +28,7 @@ struct StudyConcluded: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding()
                 .background(Color(.systemGroupedBackground))
-                .navigationTitle("ENGAGE-HF")
+                .navigationTitle("ADOPT-HF")
                 .toolbar {
                     if AccountButton.shouldDisplay {
                         AccountButton(isPresented: $presentingAccount)

@@ -124,8 +124,14 @@
     "Add Measurement: %@" : {
       "comment" : "Accessability label for the TriggerNewMeasurementButton."
     },
-    "Add Medications" : {
-      "comment" : "The text displayed on the button to add medications within the Medications view."
+    "ADOPT-HF" : {
+      "comment" : "The text used for the navigationTitle of the StudyConcluded view."
+    },
+    "ADOPT-HF Application Loading Screen" : {
+      "comment" : "Accessability label for the ContentView if the user is not signed in."
+    },
+    "ADOPT-HF Icon" : {
+      "comment" : "Accessability label for the ADOPT-HF icon."
     },
     "All Data" : {
       "comment" : "The text displayed in the MeasurementListHeader view."
@@ -216,15 +222,6 @@
     },
     "Enable Notifications in Settings" : {
       "comment" : "The text displayed on the button that is shown in the NotificationSettingsView if notifications are not authorized."
-    },
-    "ENGAGE-HF" : {
-      "comment" : "The text used for the navigationTitle of the StudyConcluded view."
-    },
-    "ENGAGE-HF Application Loading Screen" : {
-      "comment" : "Accessability label for the ContentView if the user is not signed in."
-    },
-    "ENGAGE-HF Icon" : {
-      "comment" : "Accessability label for the ENGAGE-HF icon."
     },
     "Expansion Button" : {
       "comment" : "Accessability label for the expansion button."
@@ -569,7 +566,7 @@
     "Play Video" : {
       "comment" : "The description of the playVideo MessageAction."
     },
-    "Please enter your invitation code to join the ENGAGE-HF study." : {
+    "Please enter your invitation code to join the ADOPT-HF study." : {
       "comment" : "The description displayed in the header of the InvitationCodeView."
     },
     "Process timed out." : {
@@ -657,9 +654,6 @@
     },
     "Show less" : {
       "comment" : "The text displayed on the ShowMoreButton if content is expanded."
-    },
-    "Show Measurements" : {
-      "comment" : "The text displayed on one of the toolbar buttons for debug and test environments in the Dashboard view."
     },
     "Show more" : {
       "comment" : "The text displayed on the ShowMoreButton if content is collapsed."
@@ -759,7 +753,7 @@
     "Target" : {
       "comment" : "The text used as the minimumValueLabel used in DosageGauge and DosageGaugeStyle and the maximumValueLabel of PositionedCurrentLabel."
     },
-    "Thank you for participating in the\nENGAGE-HF study!" : {
+    "Thank you for participating in the\nADOPT-HF study!" : {
       "comment" : "The title that is displayed in the StudyConcluded view."
     },
     "The invitation code is invalid or has already been used." : {
@@ -780,14 +774,8 @@
     "Trends" : {
       "comment" : "The header text for the trendsSection in the NotificationSettingsView."
     },
-    "Trigger Blood Pressure Measurement" : {
-      "comment" : "The text displayed on one of the toolbar buttons for debug and test environments in the Dashboard view."
-    },
     "Trigger Sheet" : {
       "comment" : "The text displayed on the button to open the AddMeasurementView."
-    },
-    "Trigger Weight Measurement" : {
-      "comment" : "The text displayed on one of the toolbar buttons for debug and test environments in the Dashboard view."
     },
     "twice daily" : {
       "comment" : "Schedule frequency"
@@ -971,7 +959,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Welcome to ENGAGE-HF"
+            "value" : "Welcome to ADOPT-HF"
           }
         }
       }

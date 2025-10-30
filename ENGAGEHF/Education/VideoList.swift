@@ -1,5 +1,5 @@
 //
-// This source file is part of the ENGAGE-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -40,11 +40,11 @@ struct VideoList: View {
         videoCollections: [
             VideoCollection(
                 context: VideoCollectionContext(
-                    title: "ENGAGE-HF Application",
-                    description: "Helpful videos on the ENGAGE-HF mobile application.",
+                    title: "ADOPT-HF Application",
+                    description: "Helpful videos on the ADOPT-HF mobile application.",
                     orderIndex: 1
                 ),
-                videos: [Video(title: "Welcome Video", youtubeId: "y2ziZVWossE", orderIndex: 1)]
+                videos: [Video(title: "Welcome Video", youtubeId: "gCkpkxcJVAY", orderIndex: 1)]
             )
         ]
     )

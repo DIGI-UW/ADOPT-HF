@@ -1,5 +1,5 @@
 //
-// This source file is part of the ENGAGE-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -105,7 +105,7 @@ struct InvitationCodeView: View {
                 .frame(height: 100)
                 .accessibilityHidden(true)
                 .foregroundStyle(Color.accentColor)
-            Text("Please enter your invitation code to join the ENGAGE-HF study.")
+            Text("Please enter your invitation code to join the ADOPT-HF study.")
         }
     }
 }

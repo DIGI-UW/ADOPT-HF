@@ -1,5 +1,5 @@
 //
-// This source file is part of the ENGAGE-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -48,7 +48,7 @@ struct ContentView: View {
                 HomeView()
             } else {
                 Icon()
-                    .accessibilityLabel("ENGAGE-HF Application Loading Screen")
+                    .accessibilityLabel("ADOPT-HF Application Loading Screen")
             }
         }
             .accountRequired(

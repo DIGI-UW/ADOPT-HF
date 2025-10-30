@@ -1,5 +1,5 @@
 //
-// This source file is part of the ENGAGE-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -99,8 +99,8 @@ struct VideoView: View {
             first-time user or need a refresher, this tutorial will make the process easy and straightforward. \
             Watch now to get the most out of your app and start monitoring your health with ease!
                                         
-            ENGAGE-HF features seemless bluetooth connectivity that allows you to pair your devices and take \
-            measurements without ever leaving the app. Simply set your device to pair-mode, and ENGAGE-HF will \
+            ADOPT-HF features seemless bluetooth connectivity that allows you to pair your devices and take \
+            measurements without ever leaving the app. Simply set your device to pair-mode, and ADOPT-HF will \
             automatically connect with the device and ask if you would like to pair.
             """
         )
