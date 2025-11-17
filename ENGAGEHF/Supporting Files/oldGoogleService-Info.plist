@@ -2,29 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CLIENT_ID</key>
+	<string>CLIENT_ID</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>REVERSED_CLIENT_ID</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBQ9jydqo3_2ar7GTRR4C_SdNmah8rOSSM</string>
+	<string>AIzaSyDTx22v72JjYmmRgAfMacc4n5Of_m6DCOM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>645324887480</string>
+	<string>GCM_SENDER_ID</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>edu.washington.iths.wprn.adopthf</string>
+	<string>edu.washington.iths.adopthf</string>
 	<key>PROJECT_ID</key>
 	<string>dot-rural-prod</string>
 	<key>STORAGE_BUCKET</key>
-	<string>dot-rural-prod.firebasestorage.app</string>
+	<string>STORAGE_BUCKET</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:645324887480:ios:83b1d04b0458722c6b6b4d</string>
+	<string>1:564969593588:web:980ee2ff08c403a5949ca1</string>
 </dict>
 </plist>

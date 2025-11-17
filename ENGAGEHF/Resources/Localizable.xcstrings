@@ -124,6 +124,9 @@
     "Add Measurement: %@" : {
       "comment" : "Accessability label for the TriggerNewMeasurementButton."
     },
+    "Add Medications" : {
+
+    },
     "ADOPT-HF" : {
       "comment" : "The text used for the navigationTitle of the StudyConcluded view."
     },
@@ -658,6 +661,9 @@
     "Show less" : {
       "comment" : "The text displayed on the ShowMoreButton if content is expanded."
     },
+    "Show Measurements" : {
+
+    },
     "Show more" : {
       "comment" : "The text displayed on the ShowMoreButton if content is collapsed."
     },
@@ -777,8 +783,14 @@
     "Trends" : {
       "comment" : "The header text for the trendsSection in the NotificationSettingsView."
     },
+    "Trigger Blood Pressure Measurement" : {
+
+    },
     "Trigger Sheet" : {
       "comment" : "The text displayed on the button to open the AddMeasurementView."
+    },
+    "Trigger Weight Measurement" : {
+
     },
     "twice daily" : {
       "comment" : "Schedule frequency"
