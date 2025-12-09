@@ -428,7 +428,7 @@
 		6504AFF52D40382F001F4A03 /* StudyConcluded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyConcluded.swift; sourceTree = "<group>"; };
 		6504AFF72D403914001F4A03 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		6504B0022D40C8BF001F4A03 /* AccountDisabled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDisabled.swift; sourceTree = "<group>"; };
-		653A254D283387FE005D4D48 /* ENGAGEHF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ENGAGEHF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		653A254D283387FE005D4D48 /* ADOPTHF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADOPTHF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		653A2550283387FE005D4D48 /* ENGAGEHF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENGAGEHF.swift; sourceTree = "<group>"; };
 		653A255428338800005D4D48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		653A255D28338800005D4D48 /* ENGAGEHFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ENGAGEHFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1104,7 +1104,7 @@
 		653A254E283387FE005D4D48 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				653A254D283387FE005D4D48 /* ENGAGEHF.app */,
+				653A254D283387FE005D4D48 /* ADOPTHF.app */,
 				653A255D28338800005D4D48 /* ENGAGEHFTests.xctest */,
 				653A256728338800005D4D48 /* ENGAGEHFUITests.xctest */,
 			);
@@ -1236,7 +1236,7 @@
 				A92F50672E63A2CB0051C0FD /* SpeziOmron */,
 			);
 			productName = ENGAGEHF;
-			productReference = 653A254D283387FE005D4D48 /* ENGAGEHF.app */;
+			productReference = 653A254D283387FE005D4D48 /* ADOPTHF.app */;
 			productType = "com.apple.product-type.application";
 		};
 		653A255C28338800005D4D48 /* ENGAGEHFTests */ = {
@@ -1758,9 +1758,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.washington.iths.wprn.adopthf;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = ADOPTHF;
+				PRODUCT_NAME = ADOPTHF;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1787,9 +1788,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.washington.iths.wprn.adopthf;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = ADOPTHF;
+				PRODUCT_NAME = ADOPTHF;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

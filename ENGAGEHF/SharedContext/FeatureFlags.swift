@@ -37,7 +37,7 @@ enum FeatureFlags {
     nonisolated static let skipRemoteNotificationRegistration = CommandLine.arguments.contains("--skipRemoteNotificationRegistration")
     #if targetEnvironment(simulator)
     /// Controls whether the app connects to the local Firebase emulator. Always true on the iOS simulator. `disableFirebase` takes priority over `useFirebaseEmulator`.
-    nonisolated static let useFirebaseEmulator = true
+    nonisolated static let useFirebaseEmulator = false
     #else
     /// Controls whether the app connects to the local Firebase emulator.
     nonisolated static let useFirebaseEmulator = CommandLine.arguments.contains("--useFirebaseEmulator")
