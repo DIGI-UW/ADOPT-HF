@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -16,7 +16,7 @@ struct GraphPicker: View {
     var body: some View {
         Picker("Graph Selection", selection: $selection) {
             ForEach(GraphSelection.allCases) { selection in
-                Text(String(describing: selection))
+                Text(selection.description)
                     .multilineTextAlignment(.center)
             }
         }

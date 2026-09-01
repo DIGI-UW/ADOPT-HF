@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2024 Stanford University
 //
@@ -21,6 +21,18 @@ enum MedicationRecommendationType: String, Decodable, Comparable {
     case noActionRequired
     
     
+    var localizedDescription: String {
+        switch self {
+        case .targetDoseReached: String(localized: "Target Dose Reached", comment: "Medication recommendation type")
+        case .personalTargetDoseReached: String(localized: "Personal Target Dose Reached", comment: "Medication recommendation type")
+        case .improvementAvailable: String(localized: "Improvement Available", comment: "Medication recommendation type")
+        case .morePatientObservationsRequired: String(localized: "More Patient Observations Required", comment: "Medication recommendation type")
+        case .moreLabObservationsRequired: String(localized: "More Lab Observations Required", comment: "Medication recommendation type")
+        case .notStarted: String(localized: "Not Started", comment: "Medication recommendation type")
+        case .noActionRequired: String(localized: "No Action Required", comment: "Medication recommendation type")
+        }
+    }
+
     var style: RecommendationStyle {
         switch self {
         case .targetDoseReached: .targetReached

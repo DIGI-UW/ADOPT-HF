@@ -1,10 +1,10 @@
-// This source file is part of the ENGAGE-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ENGAGE-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
 // SPDX-License-Identifier: MIT
 //
-// Based on: https://github.com/StanfordBDHG/PediatricAppleWatchStudy/pull/54/
+// Based on the Stanford Pediatric Apple Watch Study
 //
 
 import XCTest
@@ -128,12 +128,18 @@ extension XCUIApplication {
         collectionViews.buttons["Signup"].tap()
         
         sleep(3)
+        
+        let passwordSaveNotNowButton =
+            scrollViews.otherElements.buttons["Not Now"]
+        if passwordSaveNotNowButton.waitForExistence(timeout: 2) {
+            passwordSaveNotNowButton.tap()
+        }
     }
     
     private func navigateInvitationCode(code: String) throws {
-        XCTAssert(staticTexts["Invitation Code"].waitForExistence(timeout: 5))
-        
-        XCTAssert(textFields["Invitation Code"].exists)
+        staticTexts["Invitation Code"].assertExists()
+
+        textFields["Invitation Code"].assertExists()
         textFields["Invitation Code"].tap()
         textFields["Invitation Code"].typeText(code)
         
@@ -185,7 +191,7 @@ extension XCUIApplication {
         XCTAssertTrue(navigationBars.buttons["Edit"].waitForExistence(timeout: 2))
         navigationBars.buttons["Edit"].tap()
 
-        XCTAssertTrue(navigationBars.buttons["Close"].waitForExistence(timeout: 2.0))
+        XCTAssertTrue(navigationBars.buttons["Cancel"].waitForExistence(timeout: 2.0))
 
         XCTAssertFalse(buttons["Delete Account"].exists)
         XCTAssertTrue(buttons["Logout"].exists)

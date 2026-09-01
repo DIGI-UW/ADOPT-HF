@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -48,7 +48,7 @@ struct PositionedCurrentLabel: View {
         var body: some View {
             VStack {
                 Gauge(value: value, in: minimum...maximum) {
-                    Text("Expected Progress: \((value - minimum) / (maximum - minimum))")
+                    Text(verbatim: "Expected Progress: \((value - minimum) / (maximum - minimum))")
                 } currentValueLabel: {
                     Text(value.asString() + " mg")
                         .background(.yellow)

@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -20,10 +20,16 @@ struct MedicationsList: View {
         if containsRecommendations {
             List {
                 if !currentlyTakenMedications.isEmpty {
-                    MedicationSection(header: "Current Medications", medications: currentlyTakenMedications)
+                    MedicationSection(
+                        header: String(localized: "Current Medications", comment: "Medication section header"),
+                        medications: currentlyTakenMedications
+                    )
                 }
                 if !notCurrentlyTakenMedications.isEmpty {
-                    MedicationSection(header: "Medications That May Help", medications: notCurrentlyTakenMedications)
+                    MedicationSection(
+                        header: String(localized: "Medications That May Help", comment: "Medication section header"),
+                        medications: notCurrentlyTakenMedications
+                    )
                 }
                 ColorLegend()
             }

@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2024 Stanford University
 //
@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import class ModelsR4.CodeableConcept
+import struct ModelsR4.CodeableConcept
 
 
 extension CodeableConcept {

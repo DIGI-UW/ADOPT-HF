@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -43,11 +43,16 @@ struct MessagesSection: View {
     
     
     private func constructAccessibilityLabel(from message: Message) -> String {
-        """
-        Message: \(message.title), \
-        description: \(message.description ?? "none"), \
-        action: \(message.action.localizedDescription.localizedString()).
-        """
+        let title = message.title
+        let description = message.description ?? String(
+            localized: "No description",
+            comment: "Accessibility placeholder for missing message description"
+        )
+        let action = message.action.localizedDescription.localizedString()
+        return String(
+            localized: "Message: \(title), description: \(description), action: \(action).",
+            comment: "Accessibility label for a message card"
+        )
     }
 }
 
@@ -66,7 +71,7 @@ struct MessagesSection: View {
                             messageManager.addMockMessage()
                         },
                         label: {
-                            Text("Add mock notification")
+                            Text(verbatim: "Add mock notification")
                         }
                     )
                 }

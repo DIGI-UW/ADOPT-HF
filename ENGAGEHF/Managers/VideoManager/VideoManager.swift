@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -58,6 +58,12 @@ final class VideoManager: Manager, @unchecked Sendable {
     
     
     func refreshContent() {
+#if DEBUG
+        // Test videos are injected locally; fetching would replace them with server state.
+        if ProcessInfo.processInfo.isPreviewSimulator || FeatureFlags.setupTestVideos {
+            return
+        }
+#endif
         Task {
             videoCollections = await getVideoSections()
         }

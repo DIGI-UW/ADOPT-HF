@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -59,7 +59,12 @@ struct MessageRow: View {
         
         return Image(systemName: imageName)
             .cardSymbolStyle()
-            .accessibilityLabel(message.action.localizedDescription.localizedString() + " Symbol")
+            .accessibilityLabel(
+                String(
+                    localized: "\(message.action.localizedDescription.localizedString()) Symbol",
+                    comment: "Accessibility label for message action icon"
+                )
+            )
     }
     
     private var processingStateView: some View {
@@ -185,7 +190,7 @@ struct MessageRow: View {
                             messageManager.addMockMessage()
                         },
                         label: {
-                            Text("Add Mock")
+                            Text(verbatim: "Add Mock")
                         }
                     )
                     AsyncButton(
@@ -193,7 +198,7 @@ struct MessageRow: View {
                             messageManager.makeMockMessagesProcessing()
                         },
                         label: {
-                            Text("Set Processing")
+                            Text(verbatim: "Set Processing")
                         }
                     )
                 }

@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -57,6 +57,7 @@ struct ExpandableSection<Parent: View, Content: View>: View {
 
 
 extension ExpandableSection where Parent == Text {
+    // periphery:ignore - kept for potentially being useful in the future
     init(
         _ header: String,
         @ViewBuilder content: @escaping () -> Content,
@@ -73,10 +74,10 @@ extension ExpandableSection where Parent == Text {
     List {
         ExpandableSection(
             content: {
-                Text("Hello, world!")
+                Text(verbatim: "Hello, world!")
             },
             header: {
-                Text("Expandable")
+                Text(verbatim: "Expandable")
             }
         )
     }
@@ -85,7 +86,7 @@ extension ExpandableSection where Parent == Text {
 #Preview("String Header") {
     List {
         ExpandableSection("Expandable") {
-            Text("Hello, world!")
+            Text(verbatim: "Hello, world!")
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -67,8 +67,8 @@ struct VideoView: View {
             @Bindable var navigationManager = navigationManager
             
             NavigationStack(path: $navigationManager.educationPath) {
-                Button("Tap Here") {
-                    navigationManager.pushEducation(previewVideo)
+                Button(action: { navigationManager.pushEducation(previewVideo) }) {
+                    Text(verbatim: "Tap Here")
                 }
                     .navigationDestination(for: Video.self) { video in
                         VideoView(video)
@@ -111,8 +111,8 @@ struct VideoView: View {
             @Bindable var navigationManager = navigationManager
             
             NavigationStack(path: $navigationManager.educationPath) {
-                Button("Tap Here") {
-                    navigationManager.pushEducation(previewVideo)
+                Button(action: { navigationManager.pushEducation(previewVideo) }) {
+                    Text(verbatim: "Tap Here")
                 }
                     .navigationDestination(for: Video.self) { video in
                         VideoView(video)

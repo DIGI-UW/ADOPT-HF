@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -33,7 +33,6 @@ final class NotificationManager: Manager, NotificationHandler, NotificationToken
     @ObservationIgnored @Dependency(NavigationManager.self) private var navigationManager
     @ObservationIgnored @Dependency(Account.self) private var account: Account?
     
-    // periphery:ignore - Properly used then the test flags is not set.
     @ObservationIgnored @Application(\.registerRemoteNotifications) private var registerRemoteNotifications
     @ObservationIgnored @Application(\.logger) private var logger
     

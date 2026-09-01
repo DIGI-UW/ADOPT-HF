@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -117,6 +117,10 @@ final class MessageManager: Manager, @unchecked Sendable {
     }
     
     private func updateSnapshotListener(for details: AccountDetails?) {
+        // Test messages are injected locally; a live listener would replace them with server state.
+        guard !(ProcessInfo.processInfo.isPreviewSimulator || FeatureFlags.setupTestMessages) else {
+            return
+        }
         logger.info("Initializing message snapshot listener...")
 
         // Remove previous snapshot listener for the user before creating new one

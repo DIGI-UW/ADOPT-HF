@@ -1,12 +1,9 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
 // SPDX-License-Identifier: MIT
-//
-// Based directly on:
-// https://github.com/StanfordSpezi/SpeziStudyApplication/blob/main/StudyApplication/SharedContext/StudyApplicationListCard.swift#L12
 //
 
 import SwiftUI
@@ -46,6 +43,7 @@ extension Text {
 
 #if DEBUG
 extension List {
+    // periphery:ignore - Used in previews
     func studyApplicationList() -> some View {
         self
             .listRowSpacing(-8)
@@ -67,7 +65,7 @@ extension List {
                         ForEach(0..<2) { _ in
                             StudyApplicationListCard {
                                 HStack {
-                                    Text("Content ...")
+                                    Text(verbatim: "Content ...")
                                     Spacer()
                                 }
                             }
@@ -75,14 +73,14 @@ extension List {
                             .listRowSeparator(.hidden)
                     },
                     header: {
-                        Text("\(.now, style: .date)")
+                        Text(Date.now, style: .date)
                             .studyApplicationHeaderStyle()
                     }
                 )
             }
         }
             .studyApplicationList()
-            .navigationTitle("List With Sections")
+            .navigationTitle(Text(verbatim: "List With Sections"))
     }
 }
 
@@ -92,14 +90,14 @@ extension List {
             ForEach(0..<2) { _ in
                 StudyApplicationListCard {
                     HStack {
-                        Text("Content ...")
+                        Text(verbatim: "Content ...")
                         Spacer()
                     }
                 }
             }
         }
             .studyApplicationList()
-            .navigationTitle("List Without Sections")
+            .navigationTitle(Text(verbatim: "List Without Sections"))
     }
 }
 #endif

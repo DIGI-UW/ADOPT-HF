@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -10,7 +10,7 @@ import FirebaseFirestore
 import FirebaseFunctions
 import FirebaseStorage
 import HealthKit
-import HealthKitOnFHIR
+import struct ModelsR4.QuestionnaireResponse
 import OSLog
 import PDFKit
 import PhoneNumberKit
@@ -20,6 +20,7 @@ import SpeziAccountPhoneNumbers
 import SpeziDevices
 import SpeziFirebaseAccount
 import SpeziFirestore
+import SpeziHealthKitFHIR
 import SpeziQuestionnaire
 import SwiftUI
 
@@ -86,7 +87,7 @@ actor ENGAGEHFStandard: Standard, EnvironmentAccessible, PhoneVerificationConstr
     }
     
     
-    func add(response: ModelsR4.QuestionnaireResponse) async throws {
+    nonisolated(nonsending) func add(response: ModelsR4.QuestionnaireResponse) async throws {
         var questionnaireId = response.identifier?.value?.value?.string ?? UUID().uuidString
 
         // Use ID "0" in test mode to match test message
@@ -96,7 +97,7 @@ actor ENGAGEHFStandard: Standard, EnvironmentAccessible, PhoneVerificationConstr
         }
 #endif
         
-        messageManager.markAsProcessing(
+        await messageManager.markAsProcessing(
             type: .questionnaire(id: questionnaireId)
         )
         

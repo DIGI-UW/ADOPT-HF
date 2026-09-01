@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -11,7 +11,7 @@ import Spezi
 import SpeziViews
 import SwiftUI
 
-
+// periphery:ignore - only used in previews
 private struct AddMeasurementViewPreviewWrapper: View {
     @State var measurement: GraphSelection?
     let targetMeasurement: GraphSelection
@@ -98,16 +98,18 @@ struct AddMeasurementView: View {
         switch type {
         case .bloodPressure:
             self.fields = [
-                FieldDetails(title: "Systolic"),
-                FieldDetails(title: "Diastolic")
+                FieldDetails(title: String(localized: "Systolic", comment: "Blood pressure field label")),
+                FieldDetails(title: String(localized: "Diastolic", comment: "Blood pressure field label"))
             ]
         case .weight:
             self.fields = [
-                FieldDetails(title: Locale.current.measurementSystem == .us ? "lb" : "kg")
+                FieldDetails(title: Locale.current.measurementSystem == .us
+                    ? String(localized: "lb", comment: "Unit abbreviation for pounds")
+                    : String(localized: "kg", comment: "Unit abbreviation for kilograms"))
             ]
         case .heartRate:
             self.fields = [
-                FieldDetails(title: "BPM")
+                FieldDetails(title: String(localized: "BPM", comment: "Unit abbreviation for beats per minute"))
             ]
         default:
             self.fields = []

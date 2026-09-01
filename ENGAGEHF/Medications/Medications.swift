@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -29,8 +29,8 @@ struct Medications: View {
                 .toolbar {
                     if FeatureFlags.setupTestMedications {
                         ToolbarItem(placement: .secondaryAction) {
-                            Button("Add Medications", systemImage: "heart.text.square") {
-                                medicationsManager.injectTestMedications()
+                            Button(action: { medicationsManager.injectTestMedications() }) {
+                                Label { Text(verbatim: "Add Medications") } icon: { Image(systemName: "heart.text.square") }
                             }
                         }
                     }

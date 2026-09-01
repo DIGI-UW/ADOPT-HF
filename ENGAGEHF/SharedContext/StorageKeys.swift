@@ -1,12 +1,12 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
 // SPDX-License-Identifier: MIT
 //
 
-/// Constants shared across the Spezi Teamplate Application to access storage information including the `AppStorage` and `SceneStorage`
+/// Constants shared across the ENGAGE-HF applicationto access storage information including the `AppStorage` and `SceneStorage`
 enum StorageKeys {
     // MARK: - Onboarding
     /// A `Bool` flag indicating of the onboarding was completed.

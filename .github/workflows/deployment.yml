@@ -1,5 +1,5 @@
 #
-# This source file is part of the ENGAGE-HF based on the Stanford Spezi Template Application project
+# This source file is part of the ENGAGE-HF iOS open-source project
 #
 # SPDX-FileCopyrightText: 2023 Stanford University
 #
@@ -77,15 +77,17 @@ jobs:
       environment: ${{ steps.determineenvironment.outputs.environment }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - name: Determine Environment
         id: determineenvironment
         run: |
           if [[ -z "${{ inputs.environment }}" ]]; then
-            echo "environment=staging" >> $GITHUB_OUTPUT
+            echo "environment=staging" >> "$GITHUB_OUTPUT"
             echo "environment: staging"
           else
-            echo "environment=${{ inputs.environment }}" >> $GITHUB_OUTPUT
+            echo "environment=${{ inputs.environment }}" >> "$GITHUB_OUTPUT"
             echo "environment: ${{ inputs.environment }}"
           fi
   vars:
@@ -94,12 +96,12 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ needs.determineenvironment.outputs.environment }}
     outputs:
-      appidentifier: ${{ vars.APP_IDENTIFIER }}
-      provisioningProfileName: ${{ vars.PROVISIONING_PROFILE_NAME }}
       version: ${{ steps.script.outputs.version }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: actions-ecosystem/action-get-latest-tag@v1
         id: get-latest-tag
         with:
@@ -108,8 +110,6 @@ jobs:
       - id: script
         run: |
           echo "Injecting Environment Variables In Deployment Workflow ..."
-          echo "appidentifier: ${{ vars.APP_IDENTIFIER }}"
-          echo "provisioningProfileName: ${{ vars.PROVISIONING_PROFILE_NAME }}"
           if [[ -z "${{ inputs.version }}" ]]; then
             LATEST_VERSION="${{ steps.get-latest-tag.outputs.tag }}"
             LATEST_VERSION="${LATEST_VERSION#v}"
@@ -119,10 +119,10 @@ jobs:
             PATCH=$((PATCH + 1))
             NEW_VERSION="${MAJOR}.${MINOR}.${PATCH}"
 
-            echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
+            echo "version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
             echo "version: $NEW_VERSION"
           else
-            echo "version=${{ inputs.version }}" >> $GITHUB_OUTPUT
+            echo "version=${{ inputs.version }}" >> "$GITHUB_OUTPUT"
             echo "version: ${{ inputs.version }}"
           fi
           echo "releasenotes: ${{ inputs.releasenotes }}"
@@ -132,11 +132,12 @@ jobs:
     uses: ./.github/workflows/build-and-test.yml
     permissions:
       contents: read
+      actions: read
     secrets: inherit
   iosapptestflightdeployment:
     name: iOS App TestFlight Deployment
     needs: [determineenvironment, vars, buildandtest]
-    uses: StanfordBDHG/.github/.github/workflows/xcodebuild-or-fastlane.yml@v2
+    uses: SchmiedmayerLab/.github/.github/workflows/xcodebuild-or-fastlane.yml@v0.5
     permissions:
       contents: read
     with:
@@ -144,5 +145,5 @@ jobs:
       environment: ${{ needs.determineenvironment.outputs.environment }}
       googleserviceinfoplistpath: 'ENGAGEHF/Supporting Files/GoogleService-Info.plist'
       setupsigning: true
-      fastlanelane: deploy environment:"${{ needs.determineenvironment.outputs.environment }}" appidentifier:"${{ needs.vars.outputs.appidentifier }}" provisioningProfile:"${{ needs.vars.outputs.provisioningProfileName }}" versionname:"${{ needs.vars.outputs.version }}" releasenotes:"${{ inputs.releasenotes }}" ${{ inputs.buildnumber && format('buildnumber:"{0}"', inputs.buildnumber) || '' }}
+      fastlanelane: deploy environment:"${{ needs.determineenvironment.outputs.environment }}" versionname:"${{ needs.vars.outputs.version }}" releasenotes:"${{ inputs.releasenotes }}" ${{ inputs.buildnumber && format('buildnumber:"{0}"', inputs.buildnumber) || '' }}
     secrets: inherit

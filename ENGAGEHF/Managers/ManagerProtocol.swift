@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -16,6 +16,6 @@ protocol RefreshableContent {
 }
 
 
-/// A `Manager` is a `Spezi` `Module` that is environment accessible, default initializable (for dependencies between modules),
+/// A `Manager` is a `Module` that is environment accessible, default initializable (for dependencies between modules),
 /// and supportive of content refreshes.
 protocol Manager: Module, EnvironmentAccessible, DefaultInitializable, RefreshableContent {}

@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -11,17 +11,14 @@ import Foundation
 
 
 /// A message describing recent changes to the user's data or calls-to-action for the patient to complete
-/// Data structure as defined in: https://github.com/StanfordBDHG/ENGAGE-HF-Firebase
+/// Data structure as defined in: https://github.com/SchmiedmayerLab/ENGAGE-HF-Firebase
 struct Message: Identifiable, Equatable, Sendable {
     @DocumentID var id: String?
-    
     let title: String
     let description: String?
     let action: MessageAction
     let isDismissible: Bool
-    // periphery:ignore - Currently not used in the app but a complete representation of the model.
     let dueDate: Date?
-    // periphery:ignore - Currently not used in the app but a complete representation of the model.
     let completionDate: Date?
     
     
@@ -67,5 +64,14 @@ extension Message: Decodable {
         self.isDismissible = try container.decode(Bool.self, forKey: .isDismissible)
         self.dueDate = try container.decodeISO8601DateIfPresent(forKey: .dueDate)
         self.completionDate = try container.decodeISO8601DateIfPresent(forKey: .completionDate)
+    }
+    
+    // This is a weird workaround for a weird issue of periphery:
+    // see: https://github.com/peripheryapp/periphery/issues/1078
+    //
+    // periphery:ignore
+    private func useUnusedProperties() {
+        _ = self.dueDate
+        _ = self.completionDate
     }
 }

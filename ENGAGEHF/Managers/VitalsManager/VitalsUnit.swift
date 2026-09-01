@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2024 Stanford University
 //
@@ -19,10 +19,10 @@ enum VitalsUnit: CustomStringConvertible {
     
     var description: String {
         switch self {
-        case .lbs: "lb"
-        case .kgs: "kg"
-        case .mmHg: "mmHg"
-        case .bpm: "BPM"
+        case .lbs: String(localized: "lb", comment: "Unit abbreviation for pounds")
+        case .kgs: String(localized: "kg", comment: "Unit abbreviation for kilograms")
+        case .mmHg: String(localized: "mmHg", comment: "Unit abbreviation for millimeters of mercury")
+        case .bpm: String(localized: "BPM", comment: "Unit abbreviation for beats per minute")
         }
     }
     

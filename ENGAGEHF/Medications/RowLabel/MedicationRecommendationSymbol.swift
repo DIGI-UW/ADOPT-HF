@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -31,7 +31,14 @@ struct MedicationRecommendationSymbol: View {
             .resizable()
             .frame(width: 35, height: 35)
             .foregroundStyle(type.style.color)
-            .accessibilityLabel("Medication Label: \(type.rawValue)")
+            .accessibilityLabel(
+                String(
+                    localized: "Medication Label: \(type.localizedDescription)",
+                    comment: "Accessibility label for medication recommendation symbol"
+                )
+            )
+            // The label reads as prose and changes with the language, so the tests match on this instead.
+            .accessibilityIdentifier("Medication Label: \(type.rawValue)")
     }
 }
 

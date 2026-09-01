@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -10,6 +10,5 @@ import Foundation
 
 
 enum FHIRSystem {
-    // swiftlint:disable:next force_unwrapping
     static let loinc = URL(string: "http://loinc.org")!
 }

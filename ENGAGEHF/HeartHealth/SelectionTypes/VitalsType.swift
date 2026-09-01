@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -18,9 +18,9 @@ enum VitalsType: CustomStringConvertible {
     
     var description: String {
         switch self {
-        case .weight: "Body Weight"
-        case .heartRate: "Heart Rate"
-        case .bloodPressure: "Blood Pressure"
+        case .weight: String(localized: "Body Weight", comment: "Vitals type label")
+        case .heartRate: String(localized: "Heart Rate", comment: "Vitals type label")
+        case .bloodPressure: String(localized: "Blood Pressure", comment: "Vitals type label")
         }
     }
     

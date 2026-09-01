@@ -1,5 +1,5 @@
 //
-// This source file is part of the ADOPT-HF project based on the Stanford Spezi Template Application project
+// This source file is part of the ADOPT-HF iOS open-source project
 //
 // SPDX-FileCopyrightText: 2023 Stanford University
 //
@@ -11,7 +11,6 @@ import SwiftUI
 
 
 struct VideoPlayer: View {
-    // swiftlint:disable:next force_unwrapping
     private static let youtubeEmbedUrl = URL(string: "https://youtube.com/embed")!
     
     let youtubeId: String
