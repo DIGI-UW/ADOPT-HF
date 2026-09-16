@@ -95,14 +95,14 @@ struct HealthSummaryView: View {
             if let healthSummaryDocument, shareState == .pdf {
                 ShareLink(
                     item: healthSummaryDocument,
-                    preview: SharePreview("Health Summary", image: Image(.engagehfIcon))
+                    preview: SharePreview("Health Summary", image: Image(.adopthfIcon))
                 )
                 .accessibilityLabel("Share Link")
             } else if let url, shareState == .qrCode {
                 ShareLink(
                     // swiftlint:disable:next force_unwrapping
                     item: URL(string: url)!,
-                    preview: SharePreview("Health Summary Link", image: Image(.engagehfIcon))
+                    preview: SharePreview("Health Summary Link", image: Image(.adopthfIcon))
                 )
                 .accessibilityLabel("Share Link")
             }

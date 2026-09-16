@@ -11,7 +11,7 @@ import SwiftUI
 
 struct Icon: View {
     var body: some View {
-        Image(.engagehfIcon)
+        Image(.adopthfIcon)
             .resizable()
             .scaledToFit()
             .frame(width: 128, height: 128)
