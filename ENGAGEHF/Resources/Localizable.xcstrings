@@ -244,6 +244,39 @@
         }
       }
     },
+    "ADOPT-HF" : {
+      "comment" : "The text used for the navigationTitle of the StudyConcluded view.",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ADOPT-HF"
+          }
+        }
+      }
+    },
+    "ADOPT-HF Application Loading Screen" : {
+      "comment" : "Accessability label for the ContentView if the user is not signed in.",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pantalla de carga de la aplicación ADOPT-HF"
+          }
+        }
+      }
+    },
+    "ADOPT-HF Icon" : {
+      "comment" : "Accessability label for the ADOPT-HF icon.",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ícono de ADOPT-HF"
+          }
+        }
+      }
+    },
     "All Data" : {
       "comment" : "The text displayed in the MeasurementListHeader view.",
       "localizations" : {
@@ -311,7 +344,7 @@
       }
     },
     "Blood Pressure" : {
-      "comment" : "Graph selection full name",
+      "comment" : "Graph selection full name\nVitals type label",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -350,7 +383,7 @@
       }
     },
     "Body Weight" : {
-      "comment" : "Graph selection full name",
+      "comment" : "Graph selection full name\nVitals type label",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -372,7 +405,7 @@
       }
     },
     "BPM" : {
-      "comment" : "Beats per minute",
+      "comment" : "Beats per minute\nUnit abbreviation for beats per minute",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -505,7 +538,7 @@
       }
     },
     "Diastolic" : {
-      "comment" : "The lower number in a blood pressure reading",
+      "comment" : "Blood pressure field label\nThe lower number in a blood pressure reading",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -588,39 +621,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Habilitar notificaciones en la configuración"
-          }
-        }
-      }
-    },
-    "ADOPT-HF" : {
-      "comment" : "The text used for the navigationTitle of the StudyConcluded view.",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ADOPT-HF"
-          }
-        }
-      }
-    },
-    "ADOPT-HF Application Loading Screen" : {
-      "comment" : "Accessability label for the ContentView if the user is not signed in.",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pantalla de carga de la aplicación ADOPT-HF"
-          }
-        }
-      }
-    },
-    "ADOPT-HF Icon" : {
-      "comment" : "Accessability label for the ADOPT-HF icon.",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ícono de ADOPT-HF"
           }
         }
       }
@@ -775,7 +775,7 @@
       }
     },
     "Heart Rate" : {
-      "comment" : "Graph selection full name",
+      "comment" : "Graph selection full name\nVitals type label",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -1184,7 +1184,7 @@
       }
     },
     "Medication Label: %@" : {
-      "comment" : "Accessability label for the MedicationRecommendationSymbol view.",
+      "comment" : "Accessibility label for medication recommendation symbol",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -1455,7 +1455,7 @@
       }
     },
     "Not Started" : {
-      "comment" : "The text displayed for the current dose in TextualDosageSummary if no information is available.",
+      "comment" : "Medication recommendation type",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -2205,7 +2205,7 @@
       }
     },
     "Systolic" : {
-      "comment" : "The higher number in a blood pressure reading",
+      "comment" : "Blood pressure field label\nThe higher number in a blood pressure reading",
       "localizations" : {
         "es" : {
           "stringUnit" : {
